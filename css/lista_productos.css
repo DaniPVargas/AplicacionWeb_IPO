@@ -1,0 +1,121 @@
+.texto-lista{
+    width: 70%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 3%;
+}
+.col-txt-img{
+    grid-column: 1;
+    text-align: justify;
+    padding-right: 30px;
+    border-right: 2px solid black;
+}
+
+.titulo{
+    font-family: Gabriola;
+    font-size: 2em;
+    text-align: center;
+}
+
+.oferta{
+    font-family: Gabriola;
+    font-size: 1.5em;
+    text-align: center;
+    background-color: #6FB93E;
+    margin-bottom: 3%;
+    border-radius: 10%;
+    padding: 10px;
+}
+
+.foto_texto{
+    height: 200px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+.col-txt-img p{
+    font-size: 1.1em;
+}
+
+
+.lista-articulos{
+    grid-column: 2;
+    list-style-type: none;
+    margin-left: 30px;
+}
+
+.lista-articulos li{
+    margin-bottom: 20px;
+}
+
+.articulo-izq{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr;
+    background-color: #F4F4F4;
+    grid-column: 2;
+    border-radius: 20px;
+}
+
+.foto-articulo-izq{
+    padding: 10px;
+    width: 130px;
+    grid-column: 1;
+    border-radius: 20px;
+}
+
+.articulo-der{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr;
+    background-color: #F4F4F4;
+    grid-column: 2;
+    border-radius: 20px;
+}
+
+.foto-articulo-der{
+    padding: 10px;
+    width: 130px;
+    grid-column: 2;
+    border-radius: 20px;
+}
+
+.nombre-articulo{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.txt-articulo-izq{
+    grid-column: 2;
+    margin-right: 10px;
+}
+
+.txt-articulo-der{
+    grid-column: 1;
+    grid-row: 1;
+    margin-left: 10px;
+}
+
+.txt-articulo-der p{
+    font-size: 0.9em;
+}
+
+.txt-articulo-izq p{
+    font-size: 0.9em;
+}
+
+.lista-articulos a{
+    text-decoration: none;
+    color: black;
+}
+
+.lista-articulos li:hover{
+    background-color: #1e2125;
+    color: white;
+    transition: all .1s;
+}

@@ -1,0 +1,70 @@
+.cuerpo{
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 3%;
+}
+.reserva-form{
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.titulo{
+    font-family: Gabriola;
+    font-size: 3em;
+    text-align: center;
+}
+
+label{
+    font-size: 1.1em;
+    color: darkslategray;
+    margin-left: 20px;
+}
+.servicio, .hora, .fecha, .nombre, .correo{
+    font-size: 1.1em;
+}
+
+.linea{
+    width: 200px;
+    border-bottom: solid 2px darkslategray;
+    height: 1px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#reserva-form p{
+    text-align: justify;
+    color: darkslategray;
+}
+
+.boton-form{
+    display: block;
+    margin: 20px auto 3%;
+    width:200px;
+    background-color: #1C8245;
+    border: 2px solid #1C8245;
+    color: white;
+    font-size: 1.2em;
+    padding: 5px 5px;
+    text-align: center;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.boton-form:hover{
+    background-color: #6FB93E;
+    border-color:#6FB93E;
+    color: #00101A;
+    transition: all .1s;
+}
+
+.reserva-img{
+    grid-column: 2;
+    width:400px;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}

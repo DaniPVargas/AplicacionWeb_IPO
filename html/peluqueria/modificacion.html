@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+    <title>La Perroquería</title>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/svg+xml" href="../../imagenes/icons/icono_nav.svg" sizes="any">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/modificacion.css">
+    <link rel="stylesheet" href="../../css/popup.css">
+    <link rel="stylesheet" href="../../css/peluqueria.css">
+</head>
+
+<body>
+<header>
+    <div class="logo-links">
+        <a href="../../index.html"><img id="logo" src="../../imagenes/icons/LogoEmpresa.svg"></a>
+
+        <div class="rrss-info">
+            <figure class="instagram"><a href="https://www.instagram.com/" target="_blank"><img src="../../imagenes/rrss/instagram.svg"></a></figure>
+            <figure class="facebook"><a href="https://es-es.facebook.com/" target="_blank"><img src="../../imagenes/rrss/facebook.svg"></a></figure>
+            <figure class="twitter"><a href="https://twitter.com/" target="_blank"><img src="../../imagenes/rrss/twitter.svg"></a></figure>
+            <div class="inf">
+                <ul>
+                    <li><a href="../../html/info/contacto.html">Contacto</a></li>
+                    <li><a href="../../html/info/faq.html">Preguntas frecuentes</a></li>
+                    <li><a href="../../html/info/sobre_nosotros.html">Sobre nosotros</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+
+<nav>
+    <ul class="menu">
+        <li class="elemento-barra-navegacion"><span class="boton-navegacion" id="boton_peluqueria">Citas</span>
+            <ul class="submenu-dropdown">
+                <li><a href="../../html/peluqueria/reserva.html">Reservar cita</a></li>
+                <li><a href="../../html/peluqueria/modificacion.html">Anular/Modificar cita</a></li>
+            </ul>
+        </li>
+        <li class="elemento-barra-navegacion"><a href="../../html/articulos/salud/lista_salud.html"><span class="boton-navegacion" id="boton_salud">Salud</span></a></li>
+        <li class="elemento-barra-navegacion"><a href="../../html/articulos/accesorios/lista_accesorios.html"><span class="boton-navegacion" id="boton_accesorios">Accesorios</span></a></li>
+        <li class="elemento-barra-navegacion"><a href="../articulos/juguetes/lista_juguetes.html"><span class="boton-navegacion" id="boton_juguetes">Juguetes</span></a></li>
+        <li class="elemento-barra-navegacion"><a href="../../html/articulos/comida/lista_comidas.html"><span class="boton-navegacion" id="boton_alimentacion">Alimentación</span></a></li>
+    </ul>
+</nav>
+
+<section>
+    <div class="cuerpo">
+        <div class="mod-txt">
+            <h2 class="titulo">Gestiona tu cita</h2>
+            <p class="texto">Por favor, introduzca el ID de su cita:</p>
+            <br>
+            <div class="introID">
+                <input class="id-input" type="text" id="input" placeholder="ID de cita" required>
+                <button class="boton-form" id="but-js"><img src="../../imagenes/icons/lupa.svg" class="but-icon"></button>
+            </div>
+            <div class="busqueda" id="div-busq">
+                <p class="texto" id="texto-error" visibility="hidden">Por favor, introduzca un ID</p>
+                <p class="texto">Tiene una reserva el martes 25 de octubre, para corte de pelo, lavado y corte de uñas, a las 18:00.</p>
+                <div class="botones">
+                    <a href="#divMod"><button class="boton-busq boton-mod" onclick="mostrarMod()">Modificar Reserva</button></a>
+                    <button class="boton-busq boton-canc" onclick="showPopupCanc()">Cancelar Reserva</button>
+                    <div class="popup canc">
+                        <div class="blocker" onclick="hidePopupCanc()"></div>
+                        <div class="contents">
+                            <img src="../../imagenes/icons/LogoEmpresa.svg">
+                            <p class="txt-confirm">¿Está seguro de que quiere cancelar su cita?</p>
+                            <button class="button-canc bconf" onclick="confirmCanc()">Confirmar</button>
+                            <button class="button-canc bmant" onclick="hidePopupCanc()">No, mantener mi cita</button>
+                        </div>
+                    </div>
+                    <div class="popup conf">
+                        <div class="blocker" onclick="hideConfirmCanc()"></div>
+                        <div class="contents">
+                            <img src="../../imagenes/icons/LogoEmpresa.svg">
+                            <p class="txt-confirm">Su cita se ha cancelado correctamente, muchas gracias.</p>
+                            <button class="button-popup" onclick="hideConfirmCanc()">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img class="gestion-img" src="../../imagenes/otros/foto_mod.png">
+    </div>
+
+    <div class="modificacion" id="divMod">
+        <h2>Modifica tu cita</h2>
+        <div class="grid-mod">
+            <form id="myForm" onsubmit="showPopup();return false">
+                <label>Tipo de servicio: </label>
+                <select class="servicio" name="servicio" required>
+                    <option selected>Corte de pelo + Baño - 30€</option>
+                    <option> Corte + Baño + Corte de uñas - 40€</option>
+                    <option>Baño - 15€</option>
+                </select>
+                <br><br><br>
+                <label>Fecha: </label>
+                <input class="fecha" type="date" id="calendar" required>
+                <br><br><br>
+                <label>Hora: </label>
+                <select class="hora" name="hora" required>
+                    <option disabled selected value> -- Elija una opción -- </option>
+                    <option>9:00-10:00</option>
+                    <option>10:00-11:00</option>
+                    <option disabled>11:00-12:00</option>
+                    <option disabled>12:00-13:00</option>
+                    <option>13:00-14:00</option>
+                    <option>14:00-15:00</option>
+                    <option>15:00-16:00</option>
+                    <option disabled>16:00-17:00</option>
+                    <option disabled>17:00-18:00</option>
+                    <option>18:00-19:00</option>
+                    <option>19:00-20:00</option>
+                </select>
+            </form>
+            <input type="submit" action="#" form="myForm" value="Aplicar cambios" class="boton-mod-2"/>
+            <br>
+            <div class="popup mod">
+                <div class="blocker" onclick="hidePopup()"></div>
+                <div class="contents">
+                    <img src="../../imagenes/icons/LogoEmpresa.svg">
+                    <h2>¡Muchas gracias!</h2>
+                    <p>Tu cita ha sido modificada correctamente. Nuevos datos:</p>
+                    <p><b>29 de noviembre a las 19:00, para corte + baño</b></p>
+                    <p>La nueva información de cita se enviará a su correo electrónico ¡Gracias!</p>
+                    <button class="button-popup" onclick="hidePopup()">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="info">
+        <div class="horario-direccion">
+            <div class="grid-direccion">
+                <img class="hd-icon" src="../../imagenes/icons/map_icon.svg">
+                <p class="hd-txt">Rúa Daniel Cortezón, nº2, Ribadeo</p><br>
+            </div>
+            <div class="grid-telefono">
+                <img class="hd-icon" src="../../imagenes/icons/white_phone.svg">
+                <p class="hd-txt">982 111 111</p>
+            </div>
+            <div class="grid-horario">
+                <img class="hd-icon" src="../../imagenes/icons/white_clock.svg">
+                <div class="hd-txt">
+                    <p><b>Lunes a Viernes:</b> 9:00-20:00</p>
+                    <p><b>Sábado:</b> 9:00-20:00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <ul class="menu-pie-pagina">
+        <a href="../../html/info/sobre_nosotros.html"><li class="elemento-pie-pagina"><span class="boton-pie-pagina">Sobre nosotros</span></li></a>
+        <a href="../../html/info/faq.html"><li class="elemento-pie-pagina"><span class="boton-pie-pagina">Preguntas frecuentes</span></li></a>
+        <a href="../../html/info/contacto.html"><li class="elemento-pie-pagina"><span class="boton-pie-pagina">Contacto</span></li></a>
+    </ul>
+</footer>
+
+<script src="../../js/busqueda.js"></script>
+<script src="../../js/block_calendar.js"></script>
+<script src="../../js/mostrarDivMod.js"></script>
+<script src="../../js/popupMod.js"></script>
+
+</body>
+
+</html>

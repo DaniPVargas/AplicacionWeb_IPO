@@ -1,0 +1,62 @@
+section{
+    width:70%;
+    min-height: 330px;
+}
+
+#boton_sn{
+    background-color: #33985C;
+    font-weight: bold;
+}
+
+#li_sn{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.titulo{
+    font-family: Gabriola;
+    font-size: 3.5em;
+    text-align: center;
+}
+
+.texto{
+    font-size: 1.1em;
+    color: darkslategray;
+    text-align: center;
+}
+
+.intro{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.titulo2{
+    margin-top: 40px;
+    font-family: Gabriola;
+    font-size: 2em;
+    text-align: center;
+}
+
+.map{
+    width: 500px;
+    grid-column: 1;
+    border-radius: 20px;
+}
+
+.servicios{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+    margin-bottom: 20px;
+}
+
+.local{
+    width: 450px;
+    grid-column: 2;
+    border-radius: 20px;
+}

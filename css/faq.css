@@ -1,0 +1,43 @@
+section{
+    width:70%;
+    min-height: 330px;
+}
+
+#boton_faq{
+    background-color: #33985C;
+    font-weight: bold;
+}
+
+#li_faq{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.titulo{
+    font-family: Gabriola;
+    font-size: 3.5em;
+    text-align: center;
+}
+
+.lista-preguntas{
+    list-style-type: decimal;
+}
+
+.lista-preguntas li::marker {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.pregunta{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.respuesta{
+    font-size: 1.1em;
+    color: darkslategray;
+}
+
+.respuesta ul{
+    list-style-type: circle;
+}

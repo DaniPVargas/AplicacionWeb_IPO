@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+    <title>La Perroquería</title>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/svg+xml" href="../../imagenes/icons/icono_nav.svg" sizes="any">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/reserva.css">
+    <link rel="stylesheet" href="../../css/popup.css">
+    <link rel="stylesheet" href="../../css/peluqueria.css">
+</head>
+
+<body>
+<header>
+    <div class="logo-links">
+        <a href="../../index.html"><img id="logo" src="../../imagenes/icons/LogoEmpresa.svg"></a>
+
+        <div class="rrss-info">
+            <figure class="instagram"><a href="https://www.instagram.com/" target="_blank"><img src="../../imagenes/rrss/instagram.svg"></a></figure>
+            <figure class="facebook"><a href="https://es-es.facebook.com/" target="_blank"><img src="../../imagenes/rrss/facebook.svg"></a></figure>
+            <figure class="twitter"><a href="https://twitter.com/" target="_blank"><img src="../../imagenes/rrss/twitter.svg"></a></figure>
+            <div class="inf">
+                <ul>
+                    <li><a href="../../html/info/contacto.html">Contacto</a></li>
+                    <li><a href="../../html/info/faq.html">Preguntas frecuentes</a></li>
+                    <li><a href="../../html/info/sobre_nosotros.html">Sobre nosotros</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+
+<nav>
+    <ul class="menu">
+        <li class="elemento-barra-navegacion"><span class="boton-navegacion" id="boton_peluqueria">Citas</span>
+            <ul class="submenu-dropdown">
+                <li><a href="../../html/peluqueria/reserva.html">Reservar cita</a></li>
+                <li><a href="../../html/peluqueria/modificacion.html">Anular/Modificar cita</a></li>
+            </ul>
+        </li>
+        <li class="elemento-barra-navegacion"><a href="../../html/articulos/salud/lista_salud.html"><span class="boton-navegacion" id="boton_salud">Salud</span></a></li>
+        <li class="elemento-barra-navegacion"><a href="../../html/articulos/accesorios/lista_accesorios.html"><span class="boton-navegacion" id="boton_accesorios">Accesorios</span></a></li>
+        <li class="elemento-barra-navegacion"><a href="../articulos/juguetes/lista_juguetes.html"><span class="boton-navegacion" id="boton_juguetes">Juguetes</span></a></li>
+        <li class="elemento-barra-navegacion"><a href="../../html/articulos/comida/lista_comidas.html"><span class="boton-navegacion" id="boton_alimentacion">Alimentación</span></a></li>
+    </ul>
+</nav>
+
+<section>
+    <div class="cuerpo">
+        <img class="reserva-img" src="../../imagenes/otros/foto_cita.png">
+        <div class="reserva-form">
+            <h2 class="titulo">Reserva tu cita</h2>
+            <form id="myForm" onsubmit="showPopup();return false">
+                <label>Tipo de servicio: </label>
+                <select class="servicio" name="servicio" id="field-servicio" required>
+                    <option selected>Corte de pelo + Baño - 30€</option>
+                    <option> Corte + Baño + Corte de uñas - 40€</option>
+                    <option>Baño - 15€</option>
+                </select>
+                <br><br>
+                <label>Fecha: </label>
+                <input class="fecha" type="date" id="calendar" required>
+                <br><br>
+                <label>Hora: </label>
+                <select class="hora" name="hora" id="field-hora" required>
+                    <option disabled selected value> -- Elija una opción -- </option>
+                    <option>9:00-10:00</option>
+                    <option>10:00-11:00</option>
+                    <option disabled>11:00-12:00</option>
+                    <option disabled>12:00-13:00</option>
+                    <option>13:00-14:00</option>
+                    <option>14:00-15:00</option>
+                    <option>15:00-16:00</option>
+                    <option disabled>16:00-17:00</option>
+                    <option disabled>17:00-18:00</option>
+                    <option>18:00-19:00</option>
+                    <option>19:00-20:00</option>
+                </select>
+                <br><br>
+                <div class="linea"></div>
+                <br>
+                <label>Nombre: </label>
+                <input class="nombre" type="text" id="field-nombre" required>
+                <br><br>
+                <label>Correo electrónico: </label>
+                <input class="correo" type="email" id="field-email" required>
+                <br><br>
+                <input type="submit" value="Reservar cita" class="boton-form">
+            </form>
+            <p>Recibirás un correo electrónico con la información de la cita. Además recibirás un ID que te permitirá
+                cancelarla, modificarla o consultarla en la web.</p>
+            <div class="popup">
+                <div class="blocker" onclick="hidePopup()"></div>
+                <div class="contents">
+                    <img src="../../imagenes/icons/LogoEmpresa.svg">
+                    <h2>¡Muchas gracias!</h2>
+                    <p>Tu cita ha sido reservada correctamente. Los datos:</p><br>
+                    <p><b>25 de octubre a las 18:00</b></p>
+                    <p><b>Corte + Baño + Pedicura</b></p><br>
+                    <p>La información de cita se enviará a su correo electrónico ¡Gracias!</p>
+                    <button class="button-popup" onclick="hidePopup()">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="info">
+        <div class="horario-direccion">
+            <div class="grid-direccion">
+                <img class="hd-icon" src="../../imagenes/icons/map_icon.svg">
+                <p class="hd-txt">Rúa Daniel Cortezón, nº2, Ribadeo</p><br>
+            </div>
+            <div class="grid-telefono">
+                <img class="hd-icon" src="../../imagenes/icons/white_phone.svg">
+                <p class="hd-txt">982 111 111</p>
+            </div>
+            <div class="grid-horario">
+                <img class="hd-icon" src="../../imagenes/icons/white_clock.svg">
+                <div class="hd-txt">
+                    <p><b>Lunes a Viernes:</b> 9:00-20:00</p>
+                    <p><b>Sábado:</b> 90:00-20:00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <ul class="menu-pie-pagina">
+        <a href="../../html/info/sobre_nosotros.html"><li class="elemento-pie-pagina"><span class="boton-pie-pagina">Sobre nosotros</span></li></a>
+        <a href="../../html/info/faq.html"><li class="elemento-pie-pagina"><span class="boton-pie-pagina">Preguntas frecuentes</span></li></a>
+        <a href="../../html/info/contacto.html"><li class="elemento-pie-pagina"><span class="boton-pie-pagina">Contacto</span></li></a>
+    </ul>
+</footer>
+
+
+<script src="../../js/block_calendar.js"></script>
+<script src="../../js/popup_texto.js"></script>
+
+</body>
+
+</html>

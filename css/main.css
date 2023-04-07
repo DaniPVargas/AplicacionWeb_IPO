@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+section{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Lista de elementos en la barra de navegación */
+.menu {
+    list-style-type: none;
+    background-color: #53B079;
+    overflow: hidden;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Elementos de la barra de navegación (boton y submenu) */
+.elemento-barra-navegacion {
+    width: 256px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.elemento-barra-navegacion a{
+    text-decoration: none;
+}
+
+/* Botones de la barra de navegación */
+.boton-navegacion {
+    display: block;
+    color: white;
+    padding: 20px 20px;
+    cursor: default;
+    height: inherit;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Elemento de la barra de navegación sobre el que se hace hover */
+.elemento-barra-navegacion:hover , .elemento-pie-pagina:hover{
+    background-color: #33985C;
+    font-weight: bold;
+}
+
+/*Submenu de dropdown de cada elemento de la barra de navegación */
+.submenu-dropdown {
+    list-style-type: none;
+    display: none;
+    position: absolute;
+    background-color: #1C8245;
+    width: inherit;
+    z-index: 1;
+    font-weight: lighter;
+}
+
+/* Los links del menu de dropdown */
+.submenu-dropdown li a {
+    display: block;
+    padding: 10px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+/* El link seleccionado del menú de dropdown */
+.submenu-dropdown li a:hover {
+    background-color: #6FB93E;
+    color: #00101A;
+    transition: all .1s;
+}
+
+.elemento-barra-navegacion:hover .submenu-dropdown {
+    display: block;
+    width: 252px;
+}
+
+ /*---------------------------------Elementos del pie de página---------------------------------------*/
+footer {
+    margin-bottom: 0;
+    height:100px;
+    width:100%;
+    background-color: #53B079;
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 30px;
+    color: white;
+}
+
+.menu-pie-pagina {
+    list-style-type: none;
+    background-color: #53B079;
+    overflow: hidden;
+    margin-bottom: 40px;
+    height: 100px;
+    grid-column: 2;
+}
+
+.elemento-pie-pagina {
+    float: right;
+    width: 200px;
+    height: 100px;
+    display: flex;
+    cursor: pointer;
+}
+
+.elemento-pie-pagina a{
+    text-decoration: none;
+}
+
+.boton-pie-pagina {
+    color: white;
+    cursor: pointer;
+    margin: auto;
+    text-align: center;
+}
+
+.info{
+    grid-column: 1;
+    height: 80px;
+    margin-top: 20px;
+    margin-bottom: auto;
+}
+
+.horario-direccion{
+    display: grid;
+    grid-auto-rows: 25px;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 10px;
+    margin-left: 15px;
+}
+
+.grid-direccion{
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+}
+
+.grid-telefono{
+    grid-column: 1;
+    grid-row: 2;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 2fr 5fr;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+}
+
+.grid-horario{
+    grid-column: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 5fr;
+    margin-top: auto;
+    margin: auto;
+    align-items: center;
+}
+
+.hd-icon{
+    grid-column: 1;
+    width: 25px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.hd-txt{
+    grid-column: 2;
+}
+
+
+/*------------------------------------Elementos de logo y enlaces de arriba----------------------------*/
+
+.logo-links{
+    height: 90px;
+    margin-top: 10px;
+}
+
+#logo{
+    float: left;
+    height: 80px;
+    margin-left: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: block;
+}
+
+.rrss-info{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 2fr;
+    width: 500px;
+    float:right;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.inf{
+    grid-column: 4;
+}
+
+.inf ul li {
+    margin-bottom: 5px;
+}
+
+.instagram{
+    grid-column: 1;
+    display: block;
+    margin: auto;
+}
+
+.facebook{
+    grid-column: 2;
+    display: block;
+    margin: auto;
+}
+
+.twitter{
+    grid-column: 3;
+    display: block;
+    margin: auto;
+}
+
+.facebook img, .instagram img, .twitter img{
+    width: 50px;
+    transition: all .2s ease-in-out;
+}
+
+.facebook img:hover, .instagram img:hover, .twitter img:hover{
+    width: 50px;
+    transform: scale(1.3);
+}
+
+.inf ul{
+    list-style-type: none;
+}
+
+.inf ul a{
+    text-decoration: none;
+    color: #5c4000;
+}
+
+.inf ul li:hover{
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/*Por último, algunos estilos para cosas comunes de varias páginas diferentes*/
+
+.enlace-boton{
+    text-decoration: none;
+}

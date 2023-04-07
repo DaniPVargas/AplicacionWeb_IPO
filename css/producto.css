@@ -1,0 +1,97 @@
+.producto{
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 4fr 4fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 3%;
+}
+
+.producto a{
+    text-decoration: none;
+}
+
+.boton-volver{
+    grid-column: 1;
+    margin-top: 60px;
+    display: block;
+    width:80px;
+    height: 50px;
+    background-color: #1C8245;
+    border: 2px solid #1C8245;
+    color: white;
+    font-size: 1.2em;
+    padding: 5px 5px;
+    text-align: center;
+    border-radius: 50px;
+}
+
+
+.boton-volver:hover{
+    background-color: #6FB93E;
+    border-color:#6FB93E;
+    color: #00101A;
+    transition: all .1s;
+}
+
+.but-icon{
+    width:40px;
+    margin: auto;
+}
+
+
+.img-prod{
+    width: 500px;
+    grid-column: 2;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.info-prod{
+    grid-column: 3;
+}
+
+.titulo{
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    font-family: Gabriola;
+    font-size: 2.5em;
+}
+
+.precio{
+    margin-left: 20px;
+    float: left;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: black;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.fabricante{
+    float: right;
+    margin-right: 20px;
+    font-size: 1.25em;
+    color: darkslategray;
+}
+
+.descripcion{
+    margin-top: 70px;
+    font-size: 1.1em;
+    color: darkslategray;
+    text-align: justify;
+}
+
+.tit-disp{
+    text-align: center;
+    font-family: Gabriola;
+    font-size: 1.5em;
+}
+.disponibilidad{
+    color: darkslategray;
+    text-align: justify;
+    font-size: 1.1em;
+}

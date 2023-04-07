@@ -1,0 +1,197 @@
+html{
+    scroll-behavior: smooth;
+}
+
+.cuerpo{
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 3%;
+}
+
+.titulo{
+    font-family: Gabriola;
+    font-size: 3em;
+    text-align: center;
+}
+
+.gestion-img{
+    grid-column: 1;
+    grid-row: 1;
+    width:400px;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gestion-txt{
+    grid-column: 2;
+}
+
+.texto{
+    text-align: center;
+    color: darkslategray;
+    font-size: 1.2em;
+}
+
+.introID{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 5fr 2fr;
+    align-items: center;
+}
+
+.id-input{
+    grid-column: 1;
+    font-size: 1.2em;
+    margin-left: 40px;
+    width: 200px;
+    height: 30px;
+}
+
+.but-icon{
+    width:40px;
+    margin: auto;
+}
+
+.boton-form{
+    display: block;
+    grid-column: 2;
+    margin: auto;
+    width:70px;
+    background-color: #1C8245;
+    border: 2px solid #1C8245;
+    color: white;
+    font-size: 1.2em;
+    padding: 5px 5px;
+    text-align: center;
+    border-radius: 50px;
+}
+
+.boton-busq{
+    grid-column: 1;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:275px;
+    background-color: white;
+    border: 2px solid #1C8245;
+    color: #1C8245;
+    font-size: 1.3em;
+    padding: 10px 10px;
+    text-align: center;
+    border-radius: 30px;
+}
+
+.botones{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+    margin-top: 30px;
+}
+
+.botones a{
+    text-decoration: none;
+}
+
+.boton-mod{
+    grid-column: 1;
+    width:200px;
+}
+
+.boton-canc{
+    grid-column: 2;
+    width:200px;
+}
+
+.boton-form:hover, .boton-busq:hover{
+    background-color: #6FB93E;
+    border-color:#6FB93E;
+    color: #00101A;
+    transition: all .1s;
+    cursor: pointer;
+}
+
+.busqueda{
+    margin-top: 40px;
+    visibility: hidden;
+}
+
+
+/*------------------------Sección desplegable al pulsar modificar-----------------------------*/
+
+.modificacion{
+    padding: 20px 0px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 30px;
+    display: none;
+}
+
+.grid-mod{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.modificacion h2{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    font-family: Gabriola;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+.modificacion form{
+    margin-left: 40px;
+    grid-column: 1;
+}
+
+label{
+    font-size: 1.1em;
+    color: darkslategray;
+    margin-left: 20px;
+}
+
+.servicio, .hora, .fecha{
+    font-size: 1.1em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.submit{
+    grid-column: 2;
+}
+
+.boton-mod-2{
+    grid-column: 2;
+    display: block;
+    margin: auto;
+    width:275px;
+    height: 50px;
+    background-color: #1C8245;
+    border: 2px solid #1C8245;
+    color: white;
+    font-size: 1.3em;
+    padding: 10px 10px;
+    text-align: center;
+    border-radius: 30px;
+}
+
+.boton-mod-2:hover{
+    background-color: #6FB93E;
+    border-color:#6FB93E;
+    color: #00101A;
+    transition: all .1s;
+    cursor: pointer;
+}

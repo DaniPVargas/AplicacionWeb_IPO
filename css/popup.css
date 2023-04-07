@@ -1,0 +1,96 @@
+.popup { display: none; }
+.popup.open { display: block; }
+
+.blocker {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    content: ' ';
+    background: rgba(0,0,0,.5);
+}
+.popup .contents {
+    width:450px;
+    border-radius: 6px;
+    padding: 30px 30px;
+
+    border: 1px solid #ccc;
+    text-align: center;
+    background: #FFF;
+
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+}
+
+.popup img{
+    width: 200px;
+}
+
+.popup h2{
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+}
+
+.txt-confirm{
+    margin-top:20px;
+}
+
+.button-popup{
+    width: 100%;
+    margin-top: 30px;
+    padding: 10px 0;
+    background: #1C8245;
+    color: white;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.button-canc{
+    width: 35%;
+    margin-top: 30px;
+    padding: 10px 5px;
+    background: #1C8245;
+    color: white;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.bconf{
+    float: left;
+    margin-left: 15px;
+    margin-top: 40px;
+    background-color: red;
+}
+
+.bconf:hover{
+    background-color: #742d32;
+    border-color:#742d32;
+    color: #FFFFFF;
+    transition: all .1s;
+}
+
+.bmant{
+    float: right;
+    margin-right: 15px;
+}
+
+.button-popup:hover, .bmant:hover{
+    background-color: #6FB93E;
+    border-color:#6FB93E;
+    color: #00101A;
+    transition: all .1s;
+}
+
+.confirmacion{
+    display: none;
+}

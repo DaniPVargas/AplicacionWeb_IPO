@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+    <title>La Perroquería</title>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/svg+xml" href="../../imagenes/icons/icono_nav.svg" sizes="any">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/contacto.css">
+    <link rel="stylesheet" href="../../css/popup.css">
+</head>
+
+<body>
+<header>
+    <div class="logo-links">
+        <a href="../../index.html"><img id="logo" src="../../imagenes/icons/LogoEmpresa.svg"></a>
+
+        <div class="rrss-info">
+            <figure class="instagram"><a href="https://www.instagram.com/" target="_blank"><img src="../../imagenes/rrss/instagram.svg"></a></figure>
+            <figure class="facebook"><a href="https://es-es.facebook.com/" target="_blank"><img src="../../imagenes/rrss/facebook.svg"></a></figure>
+            <figure class="twitter"><a href="https://twitter.com/" target="_blank"><img src="../../imagenes/rrss/twitter.svg"></a></figure>
+            <div class="inf">
+                <ul>
+                    <li id="li_contacto"><a href="../../html/info/contacto.html">Contacto</a></li>
+                    <li><a href="../../html/info/faq.html">Preguntas frecuentes</a></li>
+                    <li><a href="../../html/info/sobre_nosotros.html">Sobre nosotros</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+
+<nav>
+    <ul class="menu">
+        <li class="elemento-barra-navegacion"><span class="boton-navegacion">Citas</span>
+            <ul class="submenu-dropdown">
+                <li><a href="../../html/peluqueria/reserva.html">Reservar cita</a></li>
+                <li><a href="../../html/peluqueria/modificacion.html">Anular/Modificar cita</a></li>
+            </ul>
+        </li>
+        <li class="elemento-barra-navegacion"><a href="../../html/articulos/salud/lista_salud.html"><span class="boton-navegacion" id="boton_salud">Salud</span></a></li>
+        <li class="elemento-barra-navegacion"><a href="../../html/articulos/accesorios/lista_accesorios.html"><span class="boton-navegacion" id="boton_accesorios">Accesorios</span></a></li>
+        <li class="elemento-barra-navegacion"><a href="../articulos/juguetes/lista_juguetes.html"><span class="boton-navegacion" id="boton_juguetes">Juguetes</span></a></li>
+        <li class="elemento-barra-navegacion"><a href="../../html/articulos/comida/lista_comidas.html"><span class="boton-navegacion" id="boton_alimentacion">Alimentación</span></a></li>
+    </ul>
+</nav>
+
+<section>
+   <h2 class="titulo">Contacta con nosotros</h2>
+    <p class="texto-contacto">Para cualquier duda o consulta que quieras realizar a nuestro equipo, aquí tienes nuestra
+        información de contacto.</p>
+
+    <div class="tel-email">
+        <div class="tel">
+            <img src="../../imagenes/icons/telefono.svg" class="img-cont">
+            <p class="num-cont">982111111</p>
+        </div>
+        <div class="email">
+            <img src="../../imagenes/icons/arroba.svg" class="img-cont">
+            <p class="num-cont">laperroquería@gmail.com</p>
+        </div>
+    </div>
+
+    <p class="texto-contacto">No obstante, también puede contactar con nosotros a través del siguiente formulario:</p>
+
+    <form id="myForm" action="#myform" onsubmit="showPopup();return false">
+        <input class="name-form" type="text" placeholder="Nombre" id="field1" required>
+        <input class="email-form" type="email" placeholder="Correo electrónico" id="field2" required> <br>
+        <textarea class="text-form" type="text" placeholder="Escriba aquí su consulta" id="field3" required></textarea>
+    </form>
+
+    <input form="myForm" type="submit" class="boton-form">
+    <div class="popup">
+        <div class="blocker" onclick="hidePopup()"></div>
+        <div class="contents">
+            <img src="../../imagenes/icons/LogoEmpresa.svg">
+            <h2>¡Muchas gracias!</h2>
+            <p>Tu consulta ha sido enviada correctamente. ¡Gracias!</p>
+            <button class="button-popup" onclick="hidePopup()">Cerrar</button>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="info">
+        <div class="horario-direccion">
+            <div class="grid-direccion">
+                <img class="hd-icon" src="../../imagenes/icons/map_icon.svg">
+                <p class="hd-txt">Rúa Daniel Cortezón, nº2, Ribadeo</p><br>
+            </div>
+            <div class="grid-telefono">
+                <img class="hd-icon" src="../../imagenes/icons/white_phone.svg">
+                <p class="hd-txt">982 111 111</p>
+            </div>
+            <div class="grid-horario">
+                <img class="hd-icon" src="../../imagenes/icons/white_clock.svg">
+                <div class="hd-txt">
+                    <p><b>Lunes a Viernes:</b> 9:00-20:00</p>
+                    <p><b>Sábado:</b> 9:00-20:00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <ul class="menu-pie-pagina">
+        <a href="../../html/info/sobre_nosotros.html"><li class="elemento-pie-pagina"><span class="boton-pie-pagina">Sobre nosotros</span></li></a>
+        <a href="../../html/info/faq.html"><li class="elemento-pie-pagina"><span class="boton-pie-pagina">Preguntas frecuentes</span></li></a>
+        <a href="../../html/info/contacto.html"><li class="elemento-pie-pagina"  id="boton_contacto"><span class="boton-pie-pagina">Contacto</span></li></a>
+    </ul>
+</footer>
+
+<script src="../../js/popup_texto.js"></script>
+</body>
+
+</html>
